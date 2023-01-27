@@ -6,7 +6,7 @@ export default function EmptyMovieList() {
       <Wrapper>
         <PopcornIcon />
 
-        <NotFoundText>No movie was found</NotFoundText>
+        <NotFoundText id="not-found-text">No movie was found</NotFoundText>
       </Wrapper>
     </Container>
   );

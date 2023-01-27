@@ -32,6 +32,7 @@ export default function Navbar({
       {withSearch && (
         <SearchInput
           containerStyle={{ marginRight: "50px" }}
+          inputProps={{ id: "movie-search-input" }}
           placeholder="Search a movie..."
           value={searchValue}
           onChange={onSearchChange}

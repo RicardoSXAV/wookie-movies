@@ -76,8 +76,13 @@ export default function Home({ movies, genres }: HomeProps) {
         {filteredMovies.length ? (
           <MotionListWrapper layout transition={{ duration: 0.1 }}>
             <AnimatePresence>
-              {filteredMovies?.map(({ id, backdrop, slug }) => (
-                <MovieItem key={id} previewUrl={backdrop} movieSlug={slug} />
+              {filteredMovies?.map(({ id, backdrop, slug }, index) => (
+                <MovieItem
+                  key={id}
+                  movieId={`${selectedGenre?.toLowerCase()}-movie-${index}`}
+                  previewUrl={backdrop}
+                  movieSlug={slug}
+                />
               ))}
             </AnimatePresence>
           </MotionListWrapper>

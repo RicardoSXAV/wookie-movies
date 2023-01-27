@@ -37,14 +37,14 @@ export default function MovieDetails({ movie }: MovieDetailsProps) {
       <Navbar />
 
       <MainContent>
-        <PosterImage src={poster} />
+        <PosterImage id="movie-poster" src={poster} />
 
         <Column>
-          <Header>
+          <Header id="movie-title">
             {title} ({imdb_rating.toFixed(1)})
           </Header>
 
-          <GrayText>
+          <GrayText id="movie-information">
             {releasedYear} | {length} | {""}
             {typeof director === "string" ? director : director.join(", ")}
           </GrayText>
@@ -58,7 +58,7 @@ export default function MovieDetails({ movie }: MovieDetailsProps) {
             containerStyle={{ marginTop: "20px" }}
           />
 
-          <DescriptionText>{overview}</DescriptionText>
+          <DescriptionText id="movie-description">{overview}</DescriptionText>
         </Column>
       </MainContent>
     </PageContainer>
